@@ -20,7 +20,7 @@ $RECYCLE.BIN/
 node_modules
 
 wwwroot
-dist
+dist/**
 test
 cpj.config.json
 npm-debug.log
