@@ -43,7 +43,10 @@ export default class Generator {
 
             // Get `require` relative path.
             let requireFileFullPath = path.join(process.cwd(), this.config.proxyjs.requireFile);
-            let requireFileRelativePath = path.relative(fullFilePath, requireFileFullPath).split(path.sep).join('/');
+            let requireFileRelativePath = path.relative(path.dirname(fullFilePath), requireFileFullPath);
+            if(path.sep !== "/") {
+                  requireFileRelativePath = requireFileRelativePath.split(path.sep).join('/');
+            }
             
             console.log(fullFilePath);
             //Write to file
