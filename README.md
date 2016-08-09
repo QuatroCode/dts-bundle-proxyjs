@@ -1,4 +1,8 @@
 # dts-bundle-proxyjs
+[![NPM version](http://img.shields.io/npm/v/dts-bundle-proxyjs.svg)](https://www.npmjs.com/package/dts-bundle-proxyjs) 
+[![dependencies Status](https://david-dm.org/quatrocode/dts-bundle-proxyjs/status.svg)](https://david-dm.org/quatrocode/dts-bundle-proxyjs) 
+[![devDependencies Status](https://david-dm.org/quatrocode/dts-bundle-proxyjs/dev-status.svg)](https://david-dm.org/quatrocode/dts-bundle-proxyjs?type=dev)
+
 Generate js proxy files from dts-bundle file
 
 ## Get started
