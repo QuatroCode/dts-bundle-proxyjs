@@ -10,12 +10,14 @@
   "author": "Giedrius Grabauskas <giedrius@quatrodev.com>, Martynas Zilinskas <martynas@quatrodev.com>",
   "license": "GPL-3.0",
   "devDependencies": {
+    "@types/cli-color": "^0.3.28",
     "@types/mkdirp": "^0.3.28",
     "@types/node": "^6.0.31",
     "@types/yargs": "0.0.28",
     "typescript": "^2.0.0"
   },
   "dependencies": {
+    "cli-color": "^1.1.0",
     "mkdirp": "^0.5.1",
     "yargs": "^4.8.1"
   },

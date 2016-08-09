@@ -4,6 +4,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import Generator from './generator';
 import Arguments from './arguments';
+import * as clc from 'cli-color';
 
 const DEFAULT_CONFIG_NAME = 'dts-bundle.json';
 
@@ -22,9 +23,11 @@ class Cli {
                 this.throwError(`[Error] Config file ${DEFAULT_CONFIG_NAME} is not valid.`);
             }) as Contracts.Config;
 
+            console.info(clc.cyanBright('Using config:'), fullPath);
+
             try {
                 let generator = new Generator(this.getConfig(config, argv));
-                generator.Generate();
+                await generator.Generate();
             } catch (e) {
                 this.throwError(`[Failed] ${e}`);
             }
@@ -38,11 +41,12 @@ class Cli {
         if (args.default != null) config.proxyjs.default = args.default;
         if (args.generatedir != null) config.proxyjs.generateDir = args.generatedir;
         if (args.requirefile != null) config.proxyjs.requireFile = args.requirefile;
+        if (config.baseDir == null) config.baseDir = '';
         return config;
     }
 
     private throwError(text: string) {
-        console.error(text);
+        console.error(clc.redBright(text));
         process.exit(1);
     }
 

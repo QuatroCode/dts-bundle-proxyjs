@@ -9,17 +9,13 @@
         "sourceMap": false,
         "outDir": "dist",
         "rootDir": "src",
-        "declaration": false,
-        "typeRoots": [
-            "node_modules/@types"
-        ],
+        "declaration": true,
         "noUnusedLocals": true,
         "noImplicitThis": true,
         "noImplicitUseStrict": true,
         "strictNullChecks": true
     },
     "exclude": [
-        "node_modules",
-        "test"
+        "node_modules"
     ]
 }

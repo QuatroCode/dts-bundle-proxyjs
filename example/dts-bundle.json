@@ -1,0 +1,11 @@
+{
+    "name": "example-lib",
+    "main": "./dist/index.d.ts",
+    "out": "./dist/example-lib.d.ts",
+    "removeSource": true,
+    "proxyjs": {
+      "default": "Hello",
+      "generateDir": "./dist",
+      "requireFile": "./dist/build.js"
+    }
+}
