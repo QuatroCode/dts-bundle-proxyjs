@@ -4,7 +4,7 @@ export interface Config {
     out: string;
     proxyjs: {
         default: string;
-        generateDir: string;
+        outDir: string;
         requireFile: string;
     }
 }
@@ -15,6 +15,6 @@ export interface Arguments {
     help: boolean;
     version: boolean;
     default: string;
-    generatedir: string;
-    requirefile: string;
+    outDir: string;
+    requireFile: string;
 }

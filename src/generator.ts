@@ -37,7 +37,7 @@ export default class Generator {
         console.info(clc.yellow('Generating files:'));
         matches.forEach((match: string) => {
             let cleanedMatch = this.cleanModule(match);
-            let fullFilePath = path.join(process.cwd(), this.config.proxyjs.generateDir, `${match}.js`);
+            let fullFilePath = path.join(process.cwd(), this.config.proxyjs.outDir, `${match}.js`);
             // Make sure that all folders are created.
             mkdirp.sync(path.dirname(fullFilePath));
 
@@ -61,7 +61,7 @@ export default class Generator {
 
     private generateLine(requirePath: string, moduleName: string) {
         if (this.config.proxyjs.default === moduleName) {
-            moduleName = 'Default';
+            moduleName = 'default';
         }
         return `module.exports.default = require('${requirePath}').${moduleName};`;
     }
@@ -77,7 +77,7 @@ export default class Generator {
             filePath = filePath.split(path.sep).join('/');
         }
         
-        if (filePath.indexOf('/') === -1) {
+        if (filePath.indexOf('../') !== 0) {
             filePath = './' + filePath;
         }
 
