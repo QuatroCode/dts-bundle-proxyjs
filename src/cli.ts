@@ -42,6 +42,12 @@ class Cli {
         if (args.outDir != null) config.proxyjs.outDir = args.outDir;
         if (args.requireFile != null) config.proxyjs.requireFile = args.requireFile;
         if (config.baseDir == null) config.baseDir = '';
+        if (config.proxyjs.outDir == null) {
+            this.throwError('[Error] In proxyjs config `outDir` is undefined.');
+        }
+        if (config.proxyjs.requireFile == null) {
+            this.throwError('[Error] In proxyjs config `requireFile` is undefined.');
+        }
         return config;
     }
 
