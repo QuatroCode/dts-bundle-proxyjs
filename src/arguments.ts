@@ -17,7 +17,7 @@ export default yargs
         type: 'string'
     })
     .option('outDir', {
-        alias: 'g',
+        alias: 'o',
         describe: 'Where generate JS files.',
         type: 'string'
     })
