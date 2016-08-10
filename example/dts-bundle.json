@@ -5,7 +5,7 @@
     "removeSource": true,
     "proxyjs": {
       "default": "Hello",
-      "generateDir": "./dist",
+      "outDir": "./dist",
       "requireFile": "./dist/build.js"
     }
 }
