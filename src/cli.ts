@@ -39,8 +39,8 @@ class Cli {
 
     private getConfig(config: Contracts.Config, args: Contracts.Arguments) {
         if (args.default != null) config.proxyjs.default = args.default;
-        if (args.generatedir != null) config.proxyjs.generateDir = args.generatedir;
-        if (args.requirefile != null) config.proxyjs.requireFile = args.requirefile;
+        if (args.outDir != null) config.proxyjs.outDir = args.outDir;
+        if (args.requireFile != null) config.proxyjs.requireFile = args.requireFile;
         if (config.baseDir == null) config.baseDir = '';
         return config;
     }

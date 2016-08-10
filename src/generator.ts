@@ -37,7 +37,7 @@ export default class Generator {
         console.info(clc.yellow('Generating files:'));
         matches.forEach((match: string) => {
             let cleanedMatch = this.cleanModule(match);
-            let fullFilePath = path.join(process.cwd(), this.config.proxyjs.generateDir, `${match}.js`);
+            let fullFilePath = path.join(process.cwd(), this.config.proxyjs.outDir, `${match}.js`);
             // Make sure that all folders are created.
             mkdirp.sync(path.dirname(fullFilePath));
 

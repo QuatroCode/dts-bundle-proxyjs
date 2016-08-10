@@ -13,15 +13,15 @@ export default yargs
     })
     .option('default', {
         alias: 'd',
-        describe: 'Bundled default export.',
+        describe: 'Bundled require default export.',
         type: 'string'
     })
-    .option('generatedir', {
+    .option('outDir', {
         alias: 'g',
         describe: 'Where generate JS files.',
         type: 'string'
     })
-    .option('requirefile', {
+    .option('requireFile', {
         alias: 'r',
         describe: 'Bundled JS main file.',
         type: 'string'
