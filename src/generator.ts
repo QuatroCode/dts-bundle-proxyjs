@@ -43,8 +43,8 @@ export default class Generator {
 
             // Get `require` relative path.
             let requireFileFullPath = path.join(process.cwd(), this.config.proxyjs.requireFile);
-            let requireFileRelativePath = path.relative(fullFilePath, requireFileFullPath).split(path.sep).join('/');
-            
+            let requireFileRelativePath = this.getRelativePath(fullFilePath, requireFileFullPath);
+
             console.log(fullFilePath);
             //Write to file
             let stream = fs.createWriteStream(fullFilePath, { 'flags': 'w' });
@@ -69,5 +69,18 @@ export default class Generator {
     private cleanModule(string: string) {
         let parts = string.split('/');
         return (parts.length > 0) ? parts[parts.length - 1] : '';
+    }
+
+    private getRelativePath(fromDir: string, toFilePath: string) {
+        let filePath = path.relative(path.dirname(fromDir), toFilePath);
+        if (path.sep !== "/") {
+            filePath = filePath.split(path.sep).join('/');
+        }
+        
+        if (filePath.indexOf('/') === -1) {
+            filePath = './' + filePath;
+        }
+
+        return filePath;
     }
 }
