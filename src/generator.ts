@@ -61,7 +61,7 @@ export default class Generator {
 
     private generateLine(requirePath: string, moduleName: string) {
         if (this.config.proxyjs.default === moduleName) {
-            moduleName = 'Default';
+            moduleName = 'default';
         }
         return `module.exports.default = require('${requirePath}').${moduleName};`;
     }
