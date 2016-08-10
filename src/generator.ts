@@ -77,7 +77,7 @@ export default class Generator {
             filePath = filePath.split(path.sep).join('/');
         }
         
-        if (filePath.indexOf('/') === -1) {
+        if (filePath.indexOf('../') !== 0) {
             filePath = './' + filePath;
         }
 
