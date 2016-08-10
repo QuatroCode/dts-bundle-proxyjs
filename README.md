@@ -6,9 +6,16 @@
 Generate js proxy files from dts-bundle file
 
 ## Get started
-```sh
-$ npm install dts-bundle -g
+## Usage
+
+1) Install from npm:
+```cmd
+$ npm install dts-bundle-proxyjs
 ```
+2) Run `dts-bundle`.
+
+3) After `d.ts` file bundled, run `dts-bundle-proxyjs`.
+
 ## Features
 - Creates JS proxy from bundled dts.
 
