@@ -6,6 +6,7 @@ export interface Config {
         default: string;
         outDir: string;
         requireFile: string;
+        exportAsDefault: boolean;
     }
 }
 
@@ -17,4 +18,5 @@ export interface Arguments {
     default: string;
     outDir: string;
     requireFile: string;
+    exportAsDefault: boolean;
 }

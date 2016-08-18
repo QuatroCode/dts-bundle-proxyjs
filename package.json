@@ -7,8 +7,19 @@
     "build": "tsc -p .",
     "prepublish": "npm run build"
   },
-  "author": "Giedrius Grabauskas <giedrius@quatrodev.com>, Martynas Zilinskas <martynas@quatrodev.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuatroCode/dts-bundle-proxyjs.git"
+  },
+  "authors": [
+    "Giedrius Grabauskas <giedrius@quatrodev.com>",
+    "Martynas Zilinskas <martynas@quatrodev.com>"
+  ],
   "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/QuatroCode/dts-bundle-proxyjs/issues"
+  },
+  "homepage": "https://github.com/QuatroCode/dts-bundle-proxyjs#readme",
   "devDependencies": {
     "@types/cli-color": "^0.3.28",
     "@types/mkdirp": "^0.3.28",
