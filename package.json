@@ -1,6 +1,6 @@
 {
   "name": "dts-bundle-proxyjs",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Generates JS proxies from bundled dts.",
   "main": "index.js",
   "scripts": {
