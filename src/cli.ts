@@ -41,6 +41,7 @@ class Cli {
         if (args.default != null) config.proxyjs.default = args.default;
         if (args.outDir != null) config.proxyjs.outDir = args.outDir;
         if (args.requireFile != null) config.proxyjs.requireFile = args.requireFile;
+        if (args.exportAsDefault != null) config.proxyjs.exportAsDefault = args.exportAsDefault;
         if (config.baseDir == null) config.baseDir = '';
         if (config.proxyjs.outDir == null) {
             this.throwError('[Error] In proxyjs config `outDir` is undefined.');

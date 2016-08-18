@@ -43,7 +43,8 @@ $ dts-bundle-proxy -c dts-bundle.json
     "proxyjs": {
       "default": "Hello",
       "generateDir": "./dist",
-      "requireFile": "./dist/build.js"
+      "requireFile": "./dist/build.js",
+      "exportAsDefault": true
     }
 }
 ```
@@ -56,6 +57,7 @@ $ dts-bundle-proxy -c dts-bundle.json
 | default         | string | none    | Parts that must be included.                   |
 | generateDir `*` | string | none    | Parts that will be generated js files.         |
 | requireFile `*` | string | none    | Bundled js file from where proxy will be made. |
+| exportAsDefault | bool   | true    | Generated js files exported as default.        |
 
 `*` - Required.
 

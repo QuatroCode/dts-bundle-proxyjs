@@ -16,6 +16,11 @@ export default yargs
         describe: 'Bundled require default export.',
         type: 'string'
     })
+    .option('exportAsDefault', {
+        describe: 'Generated js files exported as default.',
+        type: 'boolean',
+        default: undefined
+    })
     .option('outDir', {
         alias: 'o',
         describe: 'Where generate JS files.',

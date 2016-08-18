@@ -63,7 +63,11 @@ export default class Generator {
         if (this.config.proxyjs.default === moduleName) {
             moduleName = 'default';
         }
-        return `module.exports.default = require('${requirePath}').${moduleName};`;
+        let exporterPrefix = "module.exports";
+        if (this.config.proxyjs.exportAsDefault === undefined || this.config.proxyjs.exportAsDefault != null && this.config.proxyjs.exportAsDefault) {
+            exporterPrefix += ".default";
+        }
+        return `${exporterPrefix} = require('${requirePath}').${moduleName};`;
     }
 
     private cleanModule(string: string) {
@@ -76,7 +80,7 @@ export default class Generator {
         if (path.sep !== "/") {
             filePath = filePath.split(path.sep).join('/');
         }
-        
+
         if (filePath.indexOf('../') !== 0) {
             filePath = './' + filePath;
         }

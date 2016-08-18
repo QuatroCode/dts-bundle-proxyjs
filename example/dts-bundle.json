@@ -6,6 +6,7 @@
     "proxyjs": {
       "default": "Hello",
       "outDir": "./dist",
-      "requireFile": "./dist/build.js"
+      "requireFile": "./dist/build.js",
+      "exportAsDefault": true
     }
 }
